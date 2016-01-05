@@ -73,9 +73,7 @@
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
 					<archive>
-						<manifest>
-							<mainClass>com.local.LocalMain</mainClass>
-						</manifest>
+						<manifest/>
 					</archive>
 				</configuration>
 			</plugin>
@@ -119,9 +117,7 @@
 				<version>2.4</version>
 				<configuration>
 					<archive>
-						<manifest>
-							<mainClass>com.test.App</mainClass>
-						</manifest>
+						<manifest/>
 					</archive>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
