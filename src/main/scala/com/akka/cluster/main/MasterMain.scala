@@ -19,7 +19,7 @@ object MasterMain {
       withFallback(ConfigFactory.parseString("akka.cluster.roles = [master]")).
       withFallback(ConfigFactory.load())
 
-    val system = ActorSystem("words", config)
+    val system = ActorSystem("sampleapp", config)
     
     val masterActorName="master" + masterNum
     

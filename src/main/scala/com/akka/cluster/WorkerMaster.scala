@@ -26,6 +26,7 @@ class WorkerMaster extends Actor
   
   // subscribe to cluster changes, MemberUp
   override def preStart(): Unit = cluster.subscribe(self, classOf[MemberUp])
+  
   // re-subscribe when restart
   override def postStop(): Unit = cluster.unsubscribe(self)
 

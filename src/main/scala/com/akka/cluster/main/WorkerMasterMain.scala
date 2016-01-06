@@ -5,19 +5,19 @@ import akka.actor.{ Props, ActorSystem }
 
 import com.akka.cluster.WorkerMaster._
 
-object WorkerProvisionerMain {
+object WorkerMasterMain {
 
   def main(args: Array[String]) {
 
     val port = if (args.isEmpty) "4551" else args(0)
 
     val config = ConfigFactory.parseString(s"akka.remote.netty.tcp.port=$port").
-      withFallback(ConfigFactory.parseString("akka.cluster.roles = [worker-master]")).
+      withFallback(ConfigFactory.parseString("akka.cluster.roles = [workermaster]")).
       withFallback(ConfigFactory.load())
 
-    val system = ActorSystem("words", config)
+    val system = ActorSystem("sampleapp", config)
     
-    val workerProvisioner = system.actorOf(jobWorkerProps, "worker")
+    val workerProvisioner = system.actorOf(workMasterprops, "workermaster")
 
   }
 

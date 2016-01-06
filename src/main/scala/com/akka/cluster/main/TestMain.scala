@@ -1,4 +1,4 @@
-package com.local
+package com.akka.cluster.main
 
 import com.typesafe.config.ConfigFactory
 import akka.actor._
@@ -29,7 +29,7 @@ object TestMain {
      }""")
     val system = ActorSystem("Test", ConfigFactory.load(config))
 
-    val initialContacts = Set(ActorPath.fromString("akka.tcp://words@127.0.0.1:3551/system/receptionist"))
+    val initialContacts = Set(ActorPath.fromString("akka.tcp://sampleapp@127.0.0.1:3551/system/receptionist"))
 
     val settings = ClusterClientSettings(system)
       .withInitialContacts(initialContacts)

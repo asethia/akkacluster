@@ -13,7 +13,7 @@ object SeedMain {
       withFallback(ConfigFactory.parseString("akka.cluster.roles = [seed]")).
       withFallback(ConfigFactory.load())
 
-    val system = ActorSystem("words", config)
+    val system = ActorSystem("sampleapp", config)
     
    }
 
