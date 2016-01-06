@@ -2,7 +2,7 @@
 
 <h5>Design</h5>
 
-<img src="https://github.com/asethia/akkacluster/designdiagram/WorkerMaster.png" border="0">
+<img src="https://github.com/asethia/akkacluster/blob/master/designdiagram/WorkerMaster.png" border="0">
 
 
 <h5>Prerequisite</h5>
