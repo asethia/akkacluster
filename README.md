@@ -1,6 +1,14 @@
 <h3>This is sample application for akka cluster balancing work across nodes</h3>
 
-<h5>Design</h5>
+<h4>Design</h4>
+
+Seed Nodes:
+
+Master Nodes:
+
+WorkerMaster:
+
+JobWorker:
 
 <img src="https://github.com/asethia/akkacluster/blob/master/designdiagram/WorkerMaster.png" border="0">
 
