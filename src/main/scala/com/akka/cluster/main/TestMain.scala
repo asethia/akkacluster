@@ -40,7 +40,7 @@ object TestMain {
 
     c ! ClusterClient.Send("/user/master1", JobRequest("test1", (1 to 5).flatMap(i => text ++ text).toList), localAffinity = true)
     c ! ClusterClient.Send("/user/master1", JobRequest("test2", (1 to 2).flatMap(i => text ++ text).toList), localAffinity = true)
-    c ! ClusterClient.Send("/user/master1", JobRequest("test2", (1 to 7).flatMap(i => text ++ text).toList), localAffinity = true)
+    c ! ClusterClient.Send("/user/master1", JobRequest("test3", (1 to 7).flatMap(i => text ++ text).toList), localAffinity = true)
 
   }
 
