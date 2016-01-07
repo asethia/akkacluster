@@ -30,12 +30,12 @@ This will create akkaclustersampleapp-1.0-jar-with-dependencies.jar in the trage
 
 To run the cluster we need to run following command from the target folder in different console window: 
 
-1. <b>Mandatory - Start Seed Node#1</b> - java -jar akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.SeedMain 2551
-2. <b>Optional - Start Seed Node#2</b> - java -jar akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.SeedMain 2552 
-3. <b>Mandatory - Start Master Node#1</b> - java -jar akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.MasterMain 3551
-4. <b>Optional - Start Master Node#2</b> - java -jar akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.MasterMain 3552
-5. <b>Mandatory - Start WorkerMaster Node#1</b> - java -jar akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.WorkerMasterMain 4551
-6. <b>Optional - Start WorkerMaster Node#2</b> - java -jar akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.WorkerMasterMain 4552
+1. <b>Mandatory - Start Seed Node#1</b> - java -classpath akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.SeedMain 2551
+2. <b>Optional - Start Seed Node#2</b> - java -classpath akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.SeedMain 2552 
+3. <b>Mandatory - Start Master Node#1</b> - java -classpath akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.MasterMain 3551
+4. <b>Optional - Start Master Node#2</b> - java -classpath akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.MasterMain 3552
+5. <b>Mandatory - Start WorkerMaster Node#1</b> - java -classpath akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.WorkerMasterMain 4551
+6. <b>Optional - Start WorkerMaster Node#2</b> - java -classpath akkaclustersampleapp-1.0-jar-with-dependencies.jar com.akka.cluster.main.WorkerMasterMain 4552
 
 After running above command, seed nodes, master and worker master are ready to start processing the job.
 
