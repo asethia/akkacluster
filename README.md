@@ -2,13 +2,12 @@
 
 <h4>Design</h4>
 
-Seed Nodes:
+Seed nodes are starting point for the cluster, and they serve as the first point of contact for Master, Worker and Job Worker nodes. Nodes join the cluster by sending a join message which contains the unique address of the node that joins. Atleast one seed node should be up and running, It is necessary that before a seed node goes down atleast other seed should be up and running. Seed nodes are configured in the application.conf resource file.
 
-Master Nodes:
+Processing Job in the cluster is consist of Seed Nodes, Master, Worker Master, and Job Workers. Master node control and supervise the completion of Job and It queues Jobs if workers are not available. Master node allocate work to Worker Master based on their availability.
+The Job workers request work from a Worker Master, process parts of the job, and return the
+Partial results to the Worker Master. The worker master reports the result to Master once all Job Worker finishes their allocated work. A job is repeated if any Worker Master or Job worker node fails during the process.
 
-WorkerMaster:
-
-JobWorker:
 
 <img src="https://github.com/asethia/akkacluster/blob/master/designdiagram/WorkerMaster.png" border="0">
 
